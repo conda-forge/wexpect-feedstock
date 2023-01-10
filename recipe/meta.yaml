@@ -1,5 +1,5 @@
 {% set name = "wexpect" %}
-{% set version = "4.0.0" %}
+{% set version = "3.3.2" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wexpect-{{ version }}.tar.gz
-  sha256: de9e739e78ec4d74a39bf8499904dacb6c594007a674fb7e10752c9b131f6522
+  sha256: a734eb1ae8a3be6b29458c72deb352a742d32ce67fb291cdfd36652534d3f7e5
 
 build:
-  number: 2
-  skip: true  # [unix or py<34]
+  number: 0
+  skip: true  # [unix]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
