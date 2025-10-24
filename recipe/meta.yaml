@@ -20,6 +20,7 @@ requirements:
     - pbr
     - pip
     - python
+    - setuptools
   run:
     - psutil
     - python
