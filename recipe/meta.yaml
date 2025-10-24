@@ -25,6 +25,7 @@ requirements:
     - psutil
     - python
     - pywin32
+    - setuptools
 
 test:
   imports:
