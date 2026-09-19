@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wexpect-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/wexpect-{{ version }}.tar.gz
   sha256: de9e739e78ec4d74a39bf8499904dacb6c594007a674fb7e10752c9b131f6522
 
 build:
-  number: 4
-  skip: true  # [unix or py<34]
+  number: 5
+  skip: true  # [unix]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,12 +20,12 @@ requirements:
     - pbr
     - pip
     - python
-    - setuptools
+    - setuptools <82
   run:
     - psutil
     - python
     - pywin32
-    - setuptools
+    - setuptools <82
 
 test:
   imports:
