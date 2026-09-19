@@ -12,7 +12,7 @@ source:
 
 build:
   number: 5
-  skip: true  # [unix or py<34]
+  skip: true  # [unix]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,12 +20,12 @@ requirements:
     - pbr
     - pip
     - python
-    - setuptools
+    - setuptools <82
   run:
     - psutil
     - python
     - pywin32
-    - setuptools
+    - setuptools <82
 
 test:
   imports:
